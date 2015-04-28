@@ -3,7 +3,9 @@
 \usepackage[british]{babel}
 \usepackage{cite}
 \usepackage{graphicx}
+\usepackage{paralist}
 \usepackage[hyphens]{url}
+\usepackage{amsmath}
 %\usepackage[pdftex]{hyperref}
 
 
@@ -15,7 +17,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{The Environmental Impacts of IT Use:\\A User-Oriented Perspective}
+\title{The Environmental Impacts of ICT Use:\\A User-Oriented Perspective}
 
 
 % author names and affiliations
@@ -54,30 +56,32 @@ Email: theo.tryfonas@bristol.ac.uk}}
 
 
 \begin{abstract}
-This paper discusses the environmental impact of the use of
-Information Technology, with a special focus on how individual user
-behaviour affects this impact. By using a life cycle assessment
-process, we are able to estimate the environmental impact of the IT
-use of an individual within the UK over a one year period. By
-estimating the energy and data consumption of an average user's
-average use of an average device, and estimating the associated energy
-usage (and thus CO$_2$ produced) of each stage in the data chain,
-summed to a CO$_2$ value for embodied carbon of an average device. To
-enable this, market segmentation is undertaken to determine the
-average user and average use, along with market research to determine
-the average device. Analysis of device performance in difference
-behaviours is also undertaken.
+We present a discussion of the environmental impact of the use of
+information and communication technologies (ICT), with a specific
+focus on how individual user behaviour affects this impact. By
+applying a life cycle assessment process, we estimate the
+environmental impact of the use of ICT of an individual within the UK
+over a one year period. By estimating the energy and data consumption
+of an average user's average use of an average device, and estimating
+the associated energy usage (and thus CO$_2$ produced) of each stage
+in the data chain, we are able to calculate the summed CO$_2$ value
+for embodied carbon of an average device. To enable this, market
+segmentation is undertaken to determine the average user and average
+use, along with market research to determine the average
+device. Analysis of device performance in difference behaviours is
+also undertaken.
 
 Overall, device energy is seen to dominate; within device, desktops
 dominate, both due to their high energy use for a given task, but also
 their high standby power, which is the most significant point of
 behaviour-driven waste. Geographical, behavioural and chronological
 factors are all evaluated to be highly significant to the impact of a
-user's IT use, along with a number of secondary factors discovered in
-the evaluation. Finally, we review the current domain research, to
-advise the secondary aims of furthering the understanding of the
-factors affecting the environmental impact of IT and to recommend
-practical improvements based on newly assessed factors.
+user's ICT use, along with a number of secondary factors. Finally, we
+recommend policy improvements based on newly-assessed factors, to
+further the understanding of the factors affecting the environmental
+impact of ICT, particularly focusing on sustainability, resource
+efficiency and the social implications of ICT in a low-carbon
+transformation.
 \end{abstract}
 
 % For peer review papers, you can put extra information on the cover
@@ -92,90 +96,93 @@ practical improvements based on newly assessed factors.
 %\IEEEpeerreviewmaketitle
 
 \begin{IEEEkeywords}
-ICT, Environmental Impact, Energy, Emissions, Life-Cycle Assessment
+ICT, Life Cycle Assessment, Environmental Impact, Low Carbon Society, Emissions, Energy
 \end{IEEEkeywords}
 
 
 \section{Introduction}
 
-\subsection{IT in Modern Society}
+\subsection{ICT in Modern Society}
 
-The invention and spread of IT is frequently cited as one of the most
-defining characteristics of humanity in the last 100 years. Arguably,
-no other development can claim to have had such a profound effect on
-the lives of every individual on the planet since the first
-exploitation of fossil fuels. Today, no other service or utility has
-as vast reach across the global population; over five billion people
-now own an IT device of some kind~\cite{arup-et-al:2011}, more than
-those who have access to clean water or sanitation. Despite this
-prevalence, IT use still continues to grow phenomenally; 90\% of all
-digital data generated has been created in the last two
-years~\cite{bbcnews:2012}. IT has demonstrated an exponential increase
-in processing power since the creation of the first computers in the
-19th century. Today, the latest Intel Haswell microprocessor
-architecture contains more than 1 billion transistors in a
-three-dimensional configuration using a 22nm process, orders of
-magnitude more more processing power than all the computers in the
-Apollo 11 lunar lander. While the death of Moore's Law has been long
-mooted, there is little evidence to suggest this growth will slow in
-the immediate future.
+The creation, development and uptake of ICT is frequently cited as one
+of the most defining characteristics of humanity over the last 100
+years. Arguably, no other development can claim to have had such a
+profound effect on the lives of every individual on the planet since
+the first exploitation of fossil fuels. Today, no other service or
+utility has as vast reach across the global population; over five
+billion people now own an ICT device of some
+kind~\cite{arup-et-al:2011}, more than those who have access to clean
+water or sanitation. Despite this penetration, ICT use still continues
+to grow; 90\% of all digital data generated has been created in the
+last two years~\cite{bbcnews:2012}. ICT has demonstrated a continued
+exponential increase in processing power since the creation of the
+first computers in the 19th century. Today, a single Intel Haswell
+microprocessor contains more than 1 billion transistors in a
+three-dimensional configuration using a 22nm process, many orders of
+magnitude more processing power than all the computers involved
+landing the first humans on the Moon in 1969. While the death of
+Moore's law has been long mooted, there is little evidence to suggest
+this growth will slow in the immediate future.
 
-IT has come to influence the nature of everyday life for many
-individuals. Entirely IT-contrived concepts such as social networks
-have redefined how individuals interact with one another; digitisation
-of finance networks now permits the trade of ineffable quantities of
-wealth across the circumference of the world in imperceptibly quick
-transfers; and the sheer might of modern supercomputers has enabled us
-to better understand the makeup of ourselves and our universe.
+Further to the technical impact, there has been significant
+socio-cultural impact; ICT has come to influence and underpin everyday
+activities for many individuals. ICT-enabled concepts such as social
+networking have redefined how individuals interact with one another;
+digitisation of finance networks now permits the trading of incredible
+(and increasingly abstract) wealth across the world over fibre and
+microwave networks; and the computational power of modern
+supercomputers has enabled us to better understand the makeup of
+ourselves and our universe.
 
-For all the benefit IT’s great power has brought, as many negative,
-unintended consequences can also be listed. These can be broken down
-into social, economic and environmental categories; we also have seen
-political imperatives around technology education and digital
+For all the benefits of ICT, it is also possible to identify negative,
+unintended consequences -- political, social, economic and
+environmental -- both now and potentially in the future. We also have
+seen emerging UK imperatives around technology education and digital
 skills~\cite{brown-et-al-toce2014}, the focus on (and profiling of)
 online behaviour~\cite{oatley+crick:2014} alongside the global
 priorities around cyber security~\cite{carr+crick-csss2015}, as well
 as the explosion in technologies surrounding the development of smart
 cities~\cite{cosgrave-et-al:2014} and future transport
 infrastructure~\cite{cooper-et-al-sose}, all at some level predicated
-on cost-effective and sustainable IT infrastructure. Such costs beg
-the question: just how sustainable is IT? A complex, and sparsely
-answered question, these consequences and our reaction to them will be
-one of the defining challenges of the 21st century.
+on cost-effective and sustainable ICT infrastructure. Such costs beg
+the question: just how sustainable is ICT? A complex question,
+transcending short-term policymaking and infrastructural investments,
+underpinning both global competitiveness and national security; the
+consequences and our reaction to them will be one of the defining
+challenges of the 21st century.
 
-\subsubsection{Environmental Impacts of IT}
+Rising concerns over man-made climate change and resource use, set
+amongst a context of rapid user growth, has driven increased focus on
+sustainability and the wider environmental impact of ICT. They have
+been associated with 1.3\% of the world's total carbon footprint and
+3.9\% of global energy use~\cite{plepys:2002,wheeland:2011}. While
+modest in terms of overall impact, the continued penetration of ICT
+brings potential concerns to how this will grow, with the rapid
+technological pace of the sector offers the perception of ease of
+change~\cite{yi+thomas:2007}.
 
-Rising concerns over climate change and resource use, set amongst a
-context of rapid user growth, has gained IT's environmental impact
-much focus. IT has been associated with 1.3\% of the world's total
-carbon footprint and 3.9\% of global energy
-use~\cite{plepys:2002,wheeland:2011}. While modest in terms of overall
-impact, the continued spread of IT brings great concern to how this
-may grow and the fast technological pace of the sector offers the
-perception of ease of change~\cite{yi+thomas:2007}.
-
-Like any product or service, IT has tangible environmental impacts
-across all parts of its life cycle, from design to its disposal
-(cradle to grave). However, today’s interconnected and geographically
-dispersed IT systems often make assessment of the impact of a given IT
-action complex and highly open to
-interpretation~\cite{andrae+andersen:2010}. A process life-cycle
+Like any product or service, ICT has tangible environmental impacts
+across all parts of its life cycle, from design to its
+disposal. However, our globally interconnected but geographically
+dispersed ICT systems often make assessment of the impact of a given
+ICT action complex and highly open to
+interpretation~\cite{andrae+andersen:2010}. A process life cycle
 carbon assessment
 (LCA)~\cite{baumann+tillman:2004,iso14040:2006,bsi2050:2011} is a
-common way of holistically exploring a product’s life and logically
-apportioning the environmental impacts
-involved~\cite{malmodin-et-al:2014}, for example, mobile
-phones~\cite{frey-et-al:2008,fehske:2011} and the wider
-telecommunications industry~\cite{scharnhorst:2008}.
+common way of holistically exploring a product’s life -- from cradle
+to grave -- and logically identifying and categorising the
+environmental impacts involved~\cite{malmodin-et-al:2014}; for
+example, mobile phones~\cite{frey-et-al:2008,fehske:2011} and the
+wider telecommunications industry~\cite{scharnhorst:2008}.
 
-\subsection{Definitions}
+\section{Definitions}
 
-\subsubsection{IT}
+\subsection{ICT}
 
-We define the ``use of IT'' as the use of information technologies
-that satisfies two criteria:
+We define the ``use of ICT'' as the use of information and
+communication technologies that satisfies two criteria:
 
-\begin{itemize}
+\begin{compactitem}
 \item Uses stored-program architecture, excluding a myriad of other
   electronic devices in use, as well as older forms of information
   technology (books, etc);
@@ -184,12 +191,12 @@ that satisfies two criteria:
   architecture only as a supplement to a different core function, such
   as cars, white goods, electrical toothbrushes, watches and bike
   computers.
-\end{itemize}
+\end{compactitem}
 
-We believe the vast majority of IT meeting these two criteria can be
+We propose that the vast majority of ICT meeting these two criteria can be
 summarised as follows:
 
-\begin{enumerate}
+\begin{compactenum}
 \item Smartphones: A mobile phone based upon a stored-program
   architecture with a range of communication technologies (e.g. GSM, GPS,
   Bluetooth, etc).
@@ -207,197 +214,198 @@ summarised as follows:
   servers and nodes.
 \item Servers: The destination for data transferred from the device
   (also referred to as data centers).
-\end{enumerate}
+\end{compactenum}
 
 Items 1 to 4 are classified as `Devices'. These are items that are
 created for their own purpose to serve the user, not to service the
-existence of other IT items. Items 5 to 7 are classified as
+existence of other ICT items. Items 5 to 7 are classified as
 `supporting infrastructure'. These are items whose primary function is
 to service the existence of the devices.
 
-\subsubsection{Individuals}
+\subsection{Individuals}
 
 The user is defined as an individual in the domestic, private, or
-public sectors. This excludes any industrial setting. Industry is
-deemed to have extreme variation in the characteristics of IT use, and
-the integration of IT and mechanical/chemical systems make valid
-apportion difficult. For example, a worker in an aluminium refinery
-may operate a computer embedded in an electrolysis machine with a
-total power consumption of over 1MW; how much of this can be
-accredited to IT could involve extensive analysis of pre- and post-IT
-states of all covered industries. As such, workers in industry will
-simply be modelled as standard private sector workers with an average
-amount of IT in their occupation. We will also include the impact of
-non-users and nearly-non-users.
+public sectors; this excludes any industrial setting. Industry is
+deemed to have extreme variation in the characteristics of ICT use,
+and the integration of ICT and mechanical/chemical systems make valid
+identification and categorisation problematic. For example, a worker
+in an aluminium refinery may operate a computer embedded in an
+electrolysis machine with a total power consumption of over 1MW; how
+much of this can be accredited to ICT could involve extensive analysis
+of pre- and post-ICT states of all dependent/related industries. As
+such, workers in industry will simply be modelled as standard private
+sector workers with an average amount of ICT in their occupation.  We
+will consider specific types of user/non-users individually, as well
+as an aggregated `average' UK citizen. We will also include the impact
+of non-users and nearly-non-users. The specific user types and how
+they make up the UK market will be discussed a later section.
 
-We will consider specific types of user/non-users individually, as
-well as then an aggregated `average' UK citizen. The specific user
-types and how they make up the UK market will be discussed in the User
-Estimation Strategy section.
-
-\subsubsection{Environment Impact}
+\subsection{Environment Impact}
 
 Throughout the main body of this report we will consider environmental
-impact exclusively as GHG emissions using the CO$_2$e metric. This
-encompasses global warming potential of CO$_2$ as well as the relative
-global warming severity of other greenhouse gases, relative to the
-severity of CO$_2$. As discussed, other elements of environmental impact
-will be discussed outside the LCA in the final Consequential Analysis
-section.
+impact exclusively as greenhouse gas (GHG) emissions using the CO$_2$e
+metric~\cite{bsi2050:2011,ieaco2em:2014}. This encompasses global
+warming potential of CO$_2$ as well as the relative global warming
+severity of other greenhouse gases, relative to the severity of
+CO$_2$. As discussed, other elements of environmental impact will be
+presented and discussed in our conclusions and recommendations.
 
-\subsubsection{Life-cycle Stages}
+\subsection{Life Cycle Stages}
 
 During the literature review and scope formation we will discuss the
 life cycle stages of the devices and are outlined below:
 
-\begin{itemize}
-\item {\emph{Creation}} - Conception to Gate: the design, extraction of raw
+\begin{compactitem}
+\item {\emph{Creation}} -- Conception to Gate: the design, extraction of raw
   materials, manufacture and all actions necessary to retail and
   deliver the device to the user.
-\item {\emph{Use}} - Gate to End Use: from the users first ownership
+\item {\emph{Use}} -- Gate to End Use: from the users first ownership
   of the device to when it ceases to be their property. Broken down
   into two subcategories:
-\begin{itemize}
-\item Use - Device - the actions of the device itself.
-\item Use - Supporting Infrastructure, made up of supporting IT and
+\begin{compactitem}
+\item Use -- Device: the actions of the device itself.
+\item Use -- Supporting Infrastructure: made up of supporting ICT and
   other supporting infrastructure.
-\end{itemize}
-\item {\emph{End of Life}} - End Use to Grave: from when the device
+\end{compactitem}
+\item {\emph{End of Life}} -- End Use to Grave: from when the device
   ceases to be property of the owner, to when all components have been
   reused/recycled/disposed.
-\end{itemize}
+\end{compactitem}
 
 
 \section{Literature Review}
 
-\subsection{Overview}
-
 There are a number of existing studies in the area of environmental
-impacts of IT, and specifically the energy and GHG impacts associated
-with devices and services; this review highlights below what are
-perceived to be areas of weak and strong focus in recent literature,
-and uses this appreciation to determine areas of novel and valuable
-work.
+impacts of ICT, and specifically the energy and GHG impacts associated
+with devices and services; this review identifies what are perceived
+to be areas of strong and weak focus in recent domain research, and
+uses this appreciation to determine areas of novel and valuable work.
 
-\subsection{Areas of Strong Focus}
+%\subsection{Areas of Strong Focus}
 
-\subsubsection{GHG emissions associated with manufacture}
+\subsection{GHG Emissions Associated with Manufacture}
 
 By looking at the latest information on the level and growth of CO$_2$
 emissions, it is possible to decompose into key driving
 factors~\cite{ieaco2em:2014}. Both Williams~\cite{williams:2004} and
 Teehan et al.~\cite{teehan-et-al:2010} explore the relationship
 between the mass of the device and the embodied GHGs associated with
-the manufacture stage. Technology manufacturers such as Apple publish data
+the manufacture stage. Technology manufacturers such as Apple publish
+data\footnote{\url{https://www.apple.com/environment/reports/}}
 relating to environmental impact for each of their products, motivated
 by customer pressure on the embodied carbon of their purchases.
 
-\subsubsection{Environmental impact of disposal}
+\subsection{Environmental Impact of Disposal}
 
 Gard and Keoleian~\cite{gard+keoleian:2002} outline that the energy
 associated with disposal is negligible relative to the use and
-manufacturing phase. Apple Environmental data for products shows this
+manufacturing phase. Apple environmental data for products shows this
 as a relatively insignificant stage: typically accounting for 2-4\% of
 the GHG emissions associated with a device, with production and use
 phase typically the greatest contributors. While consequential
 environmental impacts of disposal are significant, direct GHG emission
 is not.
 
-\subsubsection{Impact of Cloud Computing}
+\subsection{Impact of Cloud Computing}
 
-Williams et al.~\cite{williams-et-al:2014} analyses the potential
-reductions in GHG production through a shift to cloud computing, and
-the rebound effect of digital data becoming cheaper and easier to
-consume meaning more and more is used is well documented. There is a
-strong commercial motivation for such users, with the potential to
-save high-intensity IT organisations substantial savings from
-switching to the cloud.
+Williams et al. analyses the potential reductions in GHG production
+through a shift to cloud computing~\cite{williams-et-al:2014}, and the
+rebound effect of digital data becoming cheaper and easier to consume
+meaning more and more is used is well documented. There is a strong
+commercial motivation for such users, with the potential to save
+high-intensity ICT organisations substantial savings from switching to
+the cloud.
 
-\subsection{Areas of Weak Focus}
+%\subsection{Areas of Weak Focus}
 
-\subsubsection{Chronological variation of GHG emissions of electricity
+\subsection{Chronological Variation of GHG Emissions of Electricity
+  Supply}
+
+While the Realtimecarbon
+project\footnote{\url{http://realtimecarbon.org/}} was launched in
+2009, no analysis of the impact of user behaviour on this has been
+conducted: the domain literature almost exclusively refers to average
+figures for GHG impact of electricity from the national grid. This is
+widely considered to be acceptable practice, although little
+justification of this has been carried out. From our
+observations\footnote{\url{http://ukedc.rl.ac.uk/ext_stats_uk.html}},
+the carbon output of the UK National Grid can vary as much as +/-24\%
+from the standard value quoted by the Carbon
+Trust\footnote{\url{http://www.carbontrust.com/}} of 445.48g
+CO$_2$e/kWh in a short period of time, potentially giving significant
+inaccuracy in existing analyses.
+
+\subsection{Geographical variation of GHG emissions of electricity
   supply}
 
-While the Realtimecarbon project\footnote{url{http://realtimecarbon.org/}}
-was launched in 2009, no analysis of the impact of user behaviour
-on this has been conducted: literature almost exclusively refers to
-average figures for GHG impact of electricity from the national
-grid. This is widely considered to be acceptable practice, although
-little justification of this has been carried out. From our
-observations, the carbon of the UK National Grid can vary as much as
-+/-24\% from the standard value quoted by the Carbon Trust of 445.48g
-CO$_2$e/kWh in a short period of time, so on face value, this could be
-an area of great inaccuracy in existing analyses.
-
-\subsubsection{Geographical variation of GHG emissions of electricity
-  supply}
-
-The environmental impact of IT use in different countries,
+The environmental impact of ICT use in different countries,
 particularly the variation in the electrical generation carbon, is
 poorly explored in existing literature. Outside of developing
-countries, the environmental sustainability of IT is a low priority
+countries, the environmental sustainability of ICT is a low priority
 issue. However, even within developed countries, little research has
 been undertaken as to how changes in national grid generation policy
-affects the sustainability of IT, and the modelling of other countries
-gives some insight into this.
+affects the sustainability of ICT, although the modelling of other
+countries provides some insight into this~\cite{malmodin-et-al:2014}.
 
 \subsubsection{Device interchangeability}
 
 Little research appears to have been undertaken on the extent to which
 the rise of tablet and smart phone ownership has reduced the use of
-laptops and desktops, though it is commented upon on the web with
-anecdotal evidence claiming both substantial positive (ansonalex.com,
-sust-it.net) and negative impacts (techeye.net). There is little
-financial motivation for manufacturers to suggest that customers
-`downsize' their IT use to smaller devices as it would be motivating
-the sale of lower priced devices. If however, the device power is a
-dominant part of power use, downsizing could be a viable method of
-power reduction.
+laptops and desktops, though anecdotal evidence claims both
+substantial positive and negative
+impacts~\cite{andrae+andersen:2010}. There is little financial
+motivation for manufacturers to suggest that customers `downsize'
+their ICT use to smaller devices as it would be motivating the sale of
+lower priced devices. If however, the device power is a dominant part
+of power use, downsizing could be a viable method of power
+reduction~\cite{frey-et-al:2008}.
 
-\subsubsection{Accurate user behaviour data}
+\subsubsection{Accurate User Behaviour Data}
 
 Limited literature exists that analyses the relative importance of
-different uses of IT. As part of this, the power consumption of
+different uses of ICT. As part of this, the power consumption of
 individual components, and how these vary based on the type of use, is
-also very limited. Regulatory groups such as EnergyStar simply
-estimate a Total Electrical Annual Consumption (TEC), based on an
-average device power multiplied by an average hours per day of
-use. Primary research in this area is constrained by cost. By
-observation it is clear that IT is used in a number of ways, and it
-flows logically from this that these different ways may affect the
-device’s power use.
+also very limited. Regulatory groups such as Energy
+Star\footnote{\url{https://www.energystar.gov/}} estimate a total
+electrical annual consumption (TEC), based on an average device power
+multiplied by an average hours per day of use; there are also
+international datasets available from the US Energy Information
+Administration\footnote{\url{www.eia.gov/cfapps/ipdbproject/}}. Primary
+research in this area is ultimately constrained by cost; by
+observation it is clear that ICT is used in a number of ways, each
+having significant effect on the device's power use.
 
 
 \section{Scope}
 
-\subsection{Overview}
-
-Our research has uncovered four principle areas (user behaviour,
+We have identified four principle areas -- user behaviour,
 chronological variation, geographical variation and device
-interchangeability) that satisfy objectives A and B and will become
-the principle focus of our LCA design, model and primary data
-tool.
+interchangeability -- that are the principle focus of our LCA design,
+model and primary data tool. Geographical and chronological variations
+are easily applied to the existing system. This allows modelling of
+the carbon cost of electricity generation. Behavioural and device
+substitution themes can be addressed through a strong focus on the
+use-device and use-supporting infrastructure life cycle
+stages. Creation will be included in the LCA though end of life will
+not. This is because the latter is perceived to have negligible impact
+on energy and GHG emissions, whereas the contribution by the former is
+deemed significant and will provide a comparison with the use phase
+impacts.
 
-Geographical and chronological variations are easily augmented into
-the existing system. This allows modelling of the carbon cost of
-electricity generation. Behavioural and device substitution themes can
-be addressed through a strong focus on the use-device and
-use-supporting infrastructure life cycle stages. The use state section
-is described in more detail in the User Estimation Strategy. Creation
-will be included in the LCA though End of Life will not. This is
-because the latter is perceived to have negligible impact on energy
-and GHG emissions, whereas the contribution by the former is deemed
-significant and will provide a comparison with the use phase impacts.
+The GHG and energy of each prototypical day for each user type
+(exclusive of embodied) will be displayed chronologically across the
+day. The final values of annual GHG and energy will be displayed in two
+breakdowns: by user group contribution and by life cycle stage for
+each user.
 
 \subsection{User-Centric Input}
 
 To accurately capture user behaviour, it is necessary to capture it
-from primary data at the source. Even though the time-frames of this
-report limit the extent to which primary research can be undertaken,
-it is beneficial to design an tool that is capable of direct user
-input, not only for future development of the LCA, but also to
-influence the design process to carefully consider the real life
-nuances of user behaviour.
+from primary data at the source. While this is time-consuming, it is
+beneficial to design an tool that is capable of direct user input, not
+only for future development of the LCA, but also to influence the
+design process to carefully consider the real life nuances of user
+behaviour.
 
 This tool works on the concept of prototypical days. These are defined
 as days that usually have very similar patterns. For example, all days
@@ -424,13 +432,14 @@ Energy is calculated in half hour sections through the prototypical
 day. Energy per section is calculated by summing the Device, LAN, WAN
 and Server energy values. Device energy is found as described above,
 while the remaining elements are calculated based upon the data
-throughput (D) and a number of constants:
+throughput (D) and a number of constants (all energy values are in
+Joules, and the energy-data constants are given in J/MB):
 
-E\_LAN = E\_standby + (k\_energy-data\_lan * D)\\
-E\_WAN = k\_energy-data\_wan * D\\
-E\_Server = k\_energy-data\_server * D\\
-
-All energy values are in Joules, and the energy-data constants are given in J/MB.
+\begin{align*}
+   E\_LAN &= E\_standby + (k\_energy-data\_LAN * D)\\
+  E\_WAN &= k\_energy-data\_WAN * D\\
+E\_server &= k\_energy-data\_server * D\\
+\end{align*}
 
 \subsection{Carbon Calculation}
 
@@ -439,75 +448,51 @@ section, geographical location and time. The latter two data sets are
 discussed later in this document, and take the form of look- up
 tables. The carbon produced is calculated as below:
 
-C\_Device = k\_C\_time\_location * E\_Device\\
-C\_LAN = k\_C\_time\_location * E\_LAN\\
-C\_WAN = k\_C\_time\_location * E\_Device\\
-C\_Server = k\_C\_time\_location * E\_Server\\
+\begin{align*}
+C\_device &= k\_C\_time\_location * E\_device\\
+C\_LAN &= k\_C\_time\_location * E\_LAN\\
+C\_WAN &= k\_C\_time\_location * E\_WAN\\
+C\_server &= k\_C\_time\_location * E\_server\\
+\end{align*}
+
 
 CO$_2$ produced is measured in grams, and time-location constants are
 given in g/J, translated from the g/kWh that is input.
 
-\subsection{Outputs}
 
-The GHG and energy of each prototypical day for each user type
-(exclusive of embodied) will be displayed chronologically across the
-day. The final values of annual GHG and energy will be displayed in two
-breakdowns: by user group contribution and by life cycle stage for
-each user.
+\section{Data Collection Strategy}
 
-
-\section{Data Procurement Strategy}
-
-\subsection{State of Market}
+%^\subsection{State of Market}
 
 The purpose of this section is to determine the average device within
-each device type.
+each device type:
 
-\subsubsection{Phone}
+\begin{compactdesc}
+\item[Phone:] In the UK, the mobile phone market is dominated by four key players,
+with Apple and Android taking the majority market
+share\footnote{\url{http://media.ofcom.org.uk/facts/}}. A logical
+approach would be to transpose a sales by phone model metric, over a
+five year period, to a given companies market share, to roughly
+estimate the phones of that player in the UK. We can observe some of
+the most popular phones in use today, but not all, and further more
+these do not cover a significant share of all usage as there are many
+models available in this mature market.
 
-In the UK, the mobile phone market is dominated by 4 key players,
-listed with their market share (by ownership, rather than sales, as of
-2012) as so:
+\item[Tablet:] In recent years, the tablet market, has developed
+  significantly, with significant R\&D and new product lines from the
+  major manufacturers, periodically releasing updated models. 
+As a result, the tablet market can be estimated by
+device ownership with much greater ease.
 
-Apple - 43.9\%\\
-Android - 29.4\%\\
-Blackberry - 22\%\\
-Windows - 4\%\\
-
-A logical approach would be to transpose a sales by phone model
-metric, over a five year period, to a given companies market share, to
-roughly estimate the phones of that player in the UK. This analysis
-can be seen in detail in the supporting information section 1, the
-results of this are displayed in Figure 4. We can observe some of the
-most popular phones in use today, but not all, and further more these
-do not cover a significant share of all usage as there are many models
-available in this mature market.
-
-\subsubsection{Tablet}
-
-The tablet market, in comparison, has yet to reach mainstream uptake,
-and R\&D is still ongoing. Most manufacturers are currently operating
-just one or two product lines, periodically releasing updated models
-within these lines. As a result, the tablet market can be estimated by
-device ownership with much greater ease, as shown in the analysis
-outlined in supporting information section 1. Using Figure 5, we can
-observe all of the most popular tablets in use today, and these cover
-a majority of the devices in use today.
-
-\subsubsection{Laptop}
-
-The laptop market is a highly saturated and mature market, even more
+\item[Laptop:] The laptop market is a highly saturated and mature market, even more
 so than the mobile market. A vast number of different manufacturers,
 each with large number of models, makes this market impossible to
-segment into distinct key players, let alone into individual devices.
-
+segment into distinct key players, let alone into individual devices. 
 Instead the typical device characteristics are estimated from previous
 research, benchmark resources and EnergyStar data, as is frequently
 the case in previous research.
 
-\subsubsection{Desktop}
-
-The desktop market is similar to the laptop market, though perhaps
+\item[Desktop:] The desktop market is similar to the laptop market, though perhaps
 even more mature and saturated. Not only does a vast array of
 manufacturers exist, but a great deal of re-branding exists, with
 retailers reselling devices that manufacturer’s retail
@@ -515,57 +500,47 @@ themselves. Again, this market is impossible to segment into distinct
 key players, let alone individual devices. And as above, the typical
 device is estimated from previous research, benchmark resources and
 EnergyStar data, as is frequently the case in previous research.
-
+\end{compactdesc}
 
 \subsection{Manufacture}
 
 \subsubsection{Embodied GHG}
 
-This report does not have a strong focus on the embodied energy and
-carbon of IT devices resulting from the production phase in the life
+This paper does not have a strong focus on the embodied energy and
+carbon of ICT devices resulting from the production phase in the life
 cycle; instead the key focus is the use phase. However, not taking the
 energy and carbon involved in producing the devices that individuals
 use would not give a satisfactory answer for the environmental impact
-of an individual's IT use in one year. Furthermore, any conclusions
+of an individual's ICT use in one year. Furthermore, any conclusions
 about changes in the use phase need points of comparison.
 
-As such, this report does not conduct any novel research into the
+As such, this paper does not focus on the
 embodied carbon and energy of devices, but does take it into account
-in the analysis of an individual’s IT use. Analysis to estimate
-figures is shown in supporting information section 2. Using relevant
+in the analysis of an individual's ICT use. Using relevant
 research which has had a strong focus on embodied energy and carbon,
 an analysis was undertaken to give reasonable estimates for typical
-embodied GHG in each device type. These were then used to apportion a
+embodied GHG in each device type. These are then used to identify a
 value for the footprint of an owner of each device type by estimating
 the device lifetime. Finally, due to the disparity in the estimated
 values for Apple products and those of other manufacturers, an average
 value was achieved by drawing on the market share of Apple products
-for each device type. This analysis is shown in the supporting
-information section 2, and the resulting figures for each device type
-are:
-
-Desktop: 127.275 kgCO$_2$e\\
-Laptop: 85.456 kgCO$_2$e\\
-Tablet: 45.9 kgCO$_2$e\\
-Phone: 18 kgCO$_2$e\\
+for each device type; the resulting figures for each device type
+are: Desktop: 127.275 kgCO$_2$e; Laptop: 85.456 kgCO$_2$e; Tablet:
+45.9 kgCO$_2$e; Phone: 18 kgCO$_2$e.
 
 \subsection{User Input Strategy}
 
-The purpose of this section is to determine the average user of IT
-devices.
-
-\subsubsection{Market Segmentation}
-
-Using primary market research we have produced a high-level market
-segmentation of all IT users. This can be seen in detail in supporting
-information section 1. For each segment we have defined key
-behavioural points and the device types owned by each. The market
-segmentation can be seen in Figure~\ref{fig:itusersuk}.
+The purpose of this section is to determine the average user of ICT
+devices; using primary market research we have produced a high-level
+market segmentation of all ICT users. For each segment we have defined
+key behavioural points and the device types owned by each; the
+resulting market segmentation can be seen in
+Figure~\ref{fig:itusersuk}.
 
 \begin{figure*}[!ht]
 \centering
-\includegraphics[width=\textwidth]{images/ukitusers_ownership_signif.png}
-\caption{IT Users in UK, Device Ownership, and Significance to this Analysis}
+\includegraphics[width=0.9\textwidth]{images/ukitusers_ownership_signif.png}
+\caption{ICT Users in UK, device ownership and significance to this analysis}
 \label{fig:itusersuk} 
 \end{figure*}
 
@@ -574,105 +549,88 @@ seen in Figure~\ref{fig:marketshare}.  Using primary market research
 into user behaviour, we decided upon the types of days of use;
 typically `average weekend' and `average weekday' for most users. For
 each day a timetable of use, to a resolution of 0.5 hour slots, was
-specified. These can be seen in supporting information section 1.
+specified.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{images/ukitusers_marketshare.png}
-\caption{Assumed Market Share of IT User types in UK}
+\caption{Assumed market share of ICT user types in UK}
 \label{fig:marketshare} 
 \end{figure}
 
 
-\subsection{Use - Device}
+\subsection{Use -- Device}
 
-The purpose of this section is to define an average user’s IT use.
+The purpose of this section is to define an average user's ICT use and
+to explore how a device behaves in general under different use cases.
+A device can be used for many different purposes, any one of which we
+will define as a use case.  To identify a suitable selection of use
+cases, we initially brainstormed a great number of possible use
+cases. We then filtered down the selection to satisfy the following
+criteria:
 
-\subsubsection{Use Case States}
+\noindent {\textbf{Excluding those that show unusual behaviour in the
+device components:}} this excluded gaming, where Graphics Card power
+can be up to 250\% of a standard desktop’s power, discussed in the
+other components section later.
 
-A device can be used for many different purposes, any one of which we will define as a Use Case.
-To identify a suitable selection of use cases, we initially
-brainstormed a great number of possible use cases. We then filtered
-down the selection to satisfy the following criteria:
+\noindent {\textbf{Including those that are most prevalent:}} this
+excluded listening to music and scanning.
 
-{\textbf{Excluding those that show unusual behaviour in the device
-    components:}} this excluded gaming, where Graphics Card power can be up to 250\% of
-a standard desktop’s power, discussed in the other components section
-later.
+\noindent {\textbf{Excluding those that are insufficiently different
+to an idle state:}} this excluded background system tasks such as
+watchdogs and network updates.
 
-{\textbf{Including those that are most prevalent:}} this excluded listening to
-music and scanning.
+\noindent {\textbf{Including those that are necessarily distinct in
+order to comment on the key issues within our scope:}} including cloud
+and non-cloud variations of similar tasks.
 
-{\textbf{Excluding those that are insufficiently different to an idle
-    state:}} this excluded background system tasks such as watchdogs and network
-updates.
-
-{\textbf{Including those that are necessarily distinct in order to
-    comment on the key issues within our scope:}} including cloud and
-non-cloud variations of similar tasks.
-
-The final use case selection can be seen in Figure 8.
-
-\subsubsection{Use Case Characteristics}
-
-The purpose of this section is to explore how a device behaves in general under different use cases.
-
-\noindent {\textbf{Component Parts}}
-
-For this analysis we will categorise the power consuming components of
+For this analysis we categorise the power consuming components of
 a device into four categories:
 
-\begin{itemize}
-\item The CPU - including all integral elements.
-\item The Display - inclusive of the power to power the display only.
-\item Network Components - any power-consuming component that is used to transfer data in or out of the device.
-\item Other Components - inclusive of all power-consuming components
+\begin{compactitem}
+\item The CPU, including all integral elements.
+\item The Display, inclusive of the power to power the display only.
+\item Network Components, any power-consuming component that is used to transfer data in or out of the device.
+\item Other Components, inclusive of all power-consuming components
   of the device not covered in the above three categories as well as
   peripherals. Includes RAM, hard drive, motherboard, graphics
   card, sound cards in the first element; printers, scanners and input
   devices in the second.
-\end{itemize}
+\end{compactitem}
 
-\noindent {\textbf{Characteristics}}
+A use case has four principle characteristics:
 
-A Use Case has four principle characteristics:
-
-\begin{itemize}
-\item CPU Power Factor - the variation of the CPU’s power in a given use case.
-\item Display Power Factor - the variation of the Display’s power in a given use case.
-\item Other Power Factor - the variation of others in a given use case.
-\item Data Flow - the magnitude of data (summation of in and out) flow during a use case.
-\end{itemize}
-
-\noindent {\textbf{Use Case States - Power Factors}}
+\begin{compactitem}
+\item CPU Power Factor: the variation of the CPU’s power in a given use case.
+\item Display Power Factor: the variation of the Display’s power in a given use case.
+\item Other Power Factor: the variation of others in a given use case.
+\item Data Flow: the magnitude of data (summation of in and out) flow during a use case.
+\end{compactitem}
 
 The aforementioned power factors affect the given power use of each
 device component, on average, in a given use state. These are
 calculated thus:
 
-CPU = CPU Idle power * CPU power factor\\
-Other = CPU Idle Power * Other power factor\\
-Display = Display average * Display power factor\\
-
-These methodologies are discussed and justified in the following
-component sections.
-
-
-\noindent {\textbf{CPU}}
+\begin{align*}
+CPU &= CPU idle power * CPU power factor\\
+Display &= Display average * Display power factor\\
+Other &= CPU idle power * Other power factor\\
+\end{align*}
 
 CPU power use and CPU utilisation does not follow a linear
 relation. In practice, the CPU consumes tangible power when idle, and
 then increases from this to anything from 2-10 times the idle power at
-100\% utilisation.  After primary research, we can observe that
-certain types of use case manifest themselves as slight different
-tasks on different devices. For example, high intensity browsing, such
-as viewing of a video on YouTube~\cite{schien-et-al:2013} will
-typically be done at a resolution of the device or lower. As such, the
-task will require less processing power on smaller devices. Others
-will not scale in this way, for example a word document will be the
-same size and complexity of word document regardless of device size.
+100\% utilisation. During primary research, we observe that certain
+types of use case manifest themselves as different tasks on different
+devices. For example, high intensity browsing, such as viewing of a
+video on YouTube~\cite{schien-et-al:2013} will typically be done at a
+resolution of the device or lower. As such, the task will require less
+processing power on smaller devices. Others will not scale in this
+way, for example a word document will be the same size and complexity
+of word document regardless of device size.
 
-We theorise that for scalable tasks, the down scaling of task’s
+We theorise that for scalable tasks, the downscaling of task's
 intensity can be approximated as balancing out with the decrease in
 processing power for smaller devices. For non-scalable tasks, we
 theorise that applying the above approximation to them will be of
@@ -683,12 +641,12 @@ having a `power factor' for a given use case that is common to all
 four device types.
 
 As such CPU power use varies with the intensity of task it
-undertakes. Through primary research we have ascertained that
-instantaneous CPU power use, on modern CPUs, is typically low, <30\%
-for most tasks, and that average CPU intensity lower still. By primary
-research we have obtained estimations of average CPU powers for all of
-the use cases defined. These can be seen in
-Figure~\ref{fig:cpuintensity} below. We can see that the majority of
+undertakes. Through primary research we have identified that
+instantaneous CPU power use, on modern CPUs, is typically low --
+$<$30\% for most tasks -- and that average CPU intensity lower
+still. Through primary research we have obtained estimations of
+average CPU powers for all of the use cases defined; these can be seen
+in Figure~\ref{fig:cpuintensity}. We can see that the majority of
 applications use little power above idle, with a few select tasks
 actually using the full power of the device. This aligns with other
 research in the field of CPU design and use. For a standby mode of any
@@ -697,54 +655,47 @@ device, the CPU rests at its idle power.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{images/cpuintensity_usecase.png}
-\caption{CPU Intensity by Use Case}
+\caption{CPU intensity by use case}
 \label{fig:cpuintensity} 
 \end{figure}
-
-\noindent {\textbf{Display}}
 
 Research suggests display power is not dependent upon the level of
 activity on a screen: changing content does use energy in the
 display. Research also suggests that in modern displays, the exact
 colour of the content is not related to power consumption. The only
 distinct characteristic proven to influence the power consumption is
-the brightness setting of the display.
-
-In can be seen that this is typically unrelated to a task. Indeed, it
-could be said that individuals may lower the brightness during long
-working hours, such as extensive typing, or raise it when the quality
-and clarity of the image is crucial, such as when watching a
-film. This however, is most probably a matter of personal taste, and
-the inter-use-case-brightness-level variation is likely to be less
+the brightness setting of the display~\cite{malmodin-et-al:2014}. This
+is typically unrelated to a task; indeed, it could be said that
+individuals may lower the brightness during long working hours, such
+as extensive typing, or raise it when the quality and clarity of the
+image is crucial, such as when watching a film. This however, is most
+probably a matter of personal taste, and the
+inter-use-case-brightness-level variation is likely to be less
 significant than the individual’s average preferences on brightness.
-
-\noindent {\textbf{Network}}
 
 Network connection power is typically perfectly inelastic to data, and
 as such is evaluated as constant for each type, discussed by device in
-later sections. As such, no power factors exist for network devices.
+later sections. As such, no power factors exist for network
+devices. The power from the remaining components is difficult to
+estimate without considering the power uses of individual devices. As
+such, these can be inferred from the remaining observed power use of a
+given device when network and CPU powers have been taken out, as
+determined in later sections. With regards to power factors, there are
+two elements that exist:
 
-\noindent {\textbf{Other}}
-
-The power from the remaining components is difficult to estimate
-without considering the power uses of individual devices. As such,
-these can be inferred from the remaining observed power use of a given
-device when network and CPU powers have been taken out, as determined
-in later sections.
-
-With regards to power factors, there are two elements that exist:
-
-{\textbf{A) The use of peripherals to service a task:}} the inclusion of extra
+\begin{compactitem}
+\item The use of peripherals to service a task: the inclusion of extra
 devices to facilitate an end, such as printers, scanners and such. The
 power impact of such devices is given by their independent power
 ratings.
 
-{\textbf{B) The power of internal components in relation to task
-    intensity:}} research suggests most other components scale very little with task
+\item The power of internal components in relation to task intensity:
+  research suggests most other components scale very little with task
 intensity, and change their power more based on specific nuances - for
 example the HD with file sharing, the graphics card with media
 viewing. As such, this is considered to be a smaller influence than
 the peripherals
+\end{compactitem}
 
 % For each task, the other power factor will be estimated based on the
 % above factors. The other power factor will then be multiplied by the
@@ -757,29 +708,24 @@ the peripherals
 % point of further improvement.
 
 
-\subsubsection{Use -- Supporting Infrastructure}
+% \subsubsection{Use -- Supporting Infrastructure}
 
-The energy associated with data flow which is consumed by supporting
-infrastructure is outlined in more detail in supporting information
-section 4, and summarised in Table 7 below.
-
-\subsubsection{National Grid Electricity}
+% The energy associated with data flow which is consumed by supporting
+% infrastructure is outlined in more detail in supporting information
+% section 4, and summarised in Table 7 below.
 
 The final data requirement for this analysis is the carbon intensity
-of the energy used by the individual and their IT-related
-activities. As previously mentioned, this report aims to assess the
-chronological impact of the IT use, and this has been achieved using
-primary data collected from the realtimecarbon project
-(realtimecarbon.org), rather than a static average value for the
-greenhouse gas impact of grid electricity.
+of the energy used by the individual and their ICT-related
+activities. As previously mentioned, this project assesses the
+chronological impact of the ICT use, and this has been achieved using
+primary data collected from the Realtimecarbon project, rather than a
+static average value for the GHG impact of grid electricity.
 
-The figure commonly quoted for UK national grid carbon intensity is
-445.48g CO$_2$ (Carbon Trust) per unit of energy (1kWh), however in
-reality this figure changes over the course of the day, and over a
+The figure commonly quoted for UK National Grid carbon intensity is
+445.48g CO$_2$ (via Carbon Trust) per unit of energy (1kWh), however
+in reality this figure changes over the course of the day, and over a
 longer time period, depending on what energy sources are being used
-and their relative contributions to the current grid mix. This is
-summarised in Table 8 below, and data and discussion of the analysis
-is outlined in supporting information section 4.
+and their relative contributions to the current grid mix.
 
 
 \section{Results}
@@ -798,7 +744,7 @@ home; Point E shows the activation of the home desktop upon arrival,
 entering standby mode. Point F shows the increase in device power due
 to a small period of media viewing; shortly before this we see the
 only tangible power consumption of WAN and Servers, during the high
-data task of Heaving Browsing.  Immediately, we can observe that in
+data task of Heavy Browsing. Immediately, we can observe that in
 almost all situations, the phone’s power is imperceptibly small
 compared to the desktop power. Secondly, we can observe that idle
 computer power is a significant point of wastage.
@@ -806,7 +752,7 @@ computer power is a significant point of wastage.
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=\columnwidth]{images/generalist_weekday.png}
-\caption{Energy Use by Device and Component}
+\caption{Energy use by device and component}
 \label{fig:generalist_weekday} 
 \end{figure}
 
@@ -815,47 +761,49 @@ computer power is a significant point of wastage.
 Figure~\ref{fig:energyuse_co2e_overyearbyuser} demonstrates the
 energy, in use CO$_2$e and embodied CO$_2$e by user type.  Immediately, we
 can observe that there is a substantial variation in the environmental
-impact by the type of user. We will discuss the significance of this
+impact by the type of user; we will discuss the significance of this
 in the conclusion.
 
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=\columnwidth]{images/energyuse_co2e_overyearbyuser.png}
-\caption{Comparison of Energy Use and CO$_2$e for Users}
+\caption{Comparison of energy use and CO$_2$e for users}
 \label{fig:energyuse_co2e_overyearbyuser} 
 \end{figure}
 
 \subsection{By Infrastructure}
 
 Figure~\ref{fig:energyusecomparison} demonstrates the energy use by
-infrastructure type.  Immediately we can observe that the device
+infrastructure type. Immediately we can observe that the device
 dominates the power use across all user types covered. LAN appears an
 order of magnitude smaller, WAN and Server an order of magnitude
-smaller again, and roughly equal to each other. Secondarily, we can
-observe that the exact proportions of all four energy types vary
-considerably depending on the user type.
+smaller again, and roughly equal to each other. We also observe that
+the exact proportions of all four energy types vary considerably
+depending on the user type.
 
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=\columnwidth]{images/energyuse_comparison.png}
-\caption{Comparison of Energy Use of Device and Infrastructure}
+\caption{Comparison of energy use of device and infrastructure}
 \label{fig:energyusecomparison} 
 \end{figure}
 
-\subsection{Estimation of IT Impact of one average UK individual in
-  one year}
+% \subsection{Estimation of ICT Impact of an Average UK Individual in
+%   One Year}
 
 Final calculations show that, when prototypical days and user type
 distribution is taken into account, the impact of one average UK
 individual in one year is:
 
-Total energy use: 259kWh\\
-Total in use carbon: 123.7kg\\
-Total embodied carbon: 127.1kg\\
+\begin{compactdesc}
+\item[Total energy use:] 259kWh
+\item[Total in use carbon:] 123.7kg
+\item[Total embodied carbon:] 127.1kg
+\end{compactdesc}
 
-The tabulated values of energy and carbon by each prototypical day for
-each user, which have been used to produce this calculation, can be
-seen in supporting information section x?.
+% The tabulated values of energy and carbon by each prototypical day for
+% each user, which have been used to produce this calculation, can be
+% seen in supporting information section x?.
 
 % \subsection{Validation}
 
@@ -894,88 +842,76 @@ seen in supporting information section x?.
 % \label{fig:ghgimpact_times} 
 % \end{figure}
 
-\subsection{Significance of IT at Work}
+\subsection{Significance of ICT at Work}
 
 The benefit of exploring varying user behaviour is the ability to
-differentiate domestic and professional IT use. The generalist, the
-IT-less generalist and ultra IT generalist all own the same
-devices. The IT-less generalist only uses his desktop at home; the
+differentiate domestic and professional ICT use. The Generalist, the
+ICT-less Generalist and Ultra ICT Generalist all own the same
+devices. The ICT-less Generalist only uses his desktop at home; the
 Generalist uses it approximately 40\% of their working hours, the
-Ultra IT Generalist approximately 80\%. The varying desktop energy use
-over a day can be seen in Figure~\ref{fig:ghgvariation_userworkrelatedit}.
+Ultra ICT Generalist approximately 80\%. The varying desktop energy use
+over a day can be seen in
+Figure~\ref{fig:ghgvariation_userworkrelatedit}.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{images/ghgvariation_userworkrelatedit.png}
-\caption{GHG Variation with User Work-Related IT}
+\caption{GHG variation with user work-related ICT}
 \label{fig:ghgvariation_userworkrelatedit} 
 \end{figure}
 
 Immediately we can see a non-linear relationship. This can be
 explained by the significance of standby power. Having a computer on
-at work is the key factor - this immediately adds a large base power
-use (Generalist vs IT-Less Generalist), but further use of the
-computer makes a much smaller difference (Generalist vs Ultra IT
-Generalist).
-
-IT-Less Job Generalist does a little more desktop use at home as a
-result and delegates some of the would-be-desktop day time activity
-down to a phone, but both are insignificant in comparison.
-
-This highlights the significance of workplace policies to minimise
-idle computer time. The energy use of workplace computers left on
-overnight is not covered in our LCA and could be hugely significant.
+at work is the key factor -- this immediately adds a large base power
+use (Generalist vs. ICT-Less Generalist), but further use of the
+computer makes a much smaller difference (Generalist vs. Ultra ICT
+Generalist). ICT-Less Job Generalist does a little more desktop use at
+home as a result and delegates some of the would-be-desktop day time
+activity down to a phone, but both are insignificant in
+comparison. This highlights the significance of workplace policies to
+minimise idle computer time. The energy use of workplace computers
+left on overnight is not covered in our LCA and could be hugely
+significant.
 
 \subsection{Significance of Non-Users}
 
-Figure 14 (Section 5.1.2) shows that the in use CO$_2$ of near-non users
-is an order of magnitude smaller than other users. This is not only
-driven by low use, but exemplified by the efficiency of which they use
-their desktop: by turning it off immediately after use, they accrue no
-standby power wastage.
-
-However, even though they are modelled to only own a desktop, the
-embodied carbon of it is highly significant and as such they cannot be
-neglected as a user group - their total carbon footprint is only 20\%
-lower than a Portable Generalist.
-
-Furthermore, despite their efficiency of use, this translates overall
-to a heavy impact per hours of use - 1.36kg/hour compared to
-0.068kg/hour for The Portable Generalist.
+Figure~\ref{fig:energyusecomparison} shows that the in use CO$_2$ of
+near-non users is an order of magnitude smaller than other users. This
+is not only driven by low use, but exemplified by the efficiency of
+which they use their desktop: by turning it off immediately after use,
+they accrue no standby power wastage. However, even though they are
+modelled to only own a desktop, the embodied carbon of it is highly
+significant and as such they cannot be neglected as a user group --
+their total carbon footprint is only 20\% lower than a Portable
+Generalist. Furthermore, despite their efficiency of use, this
+translates overall to a heavy impact per hours of use -- 1.36kg/hour
+compared to 0.068kg/hour for The Portable Generalist.
 
 \subsection{Significance of Varying Task Types}
 
 Even though the overall impact is dominated by device energy,
 situations exist that span many different proportional makeups. It is
 important that these are considered should any of these situations
-become particularly popular in the future.
-
-An extreme with very low device power proportion can be seen at the
-top of Figure 24, a roughly equal split at the middle, and an extreme
-of high device power proportion at the bottom.
-
-Furthermore, the analysis of individual behaviour allows us to
-evaluate common perceptions of the environmental impact of given
-device uses.
-
-Figure 25 demonstrates the energy use of a Portable Generalist and two
-slight niche variations - the Social Enthusiast and Netflicker.
+become particularly popular in the future. Furthermore, the analysis
+of individual behaviour allows us to evaluate common perceptions of
+the environmental impact of given device uses.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{images/comparison_users_devices.png}
-\caption{Comparison of Different Users and their Devices}
+\caption{Comparison of different users and their devices}
 \label{fig:comparison_users_devices.png} 
 \end{figure}
 
-Common logic might suggest that streaming a video (using large amounts
-of data and increasing CPU load) would be terrible behaviour
+Logic might suggest that streaming a video (using large amounts of
+data and increasing CPU load) would be poor behaviour
 environmentally. However, the Social Enthusiast, who typically keeps
 his device on longer (particularly on the weekends) to perform a
 relatively low intensity task is far worse. Furthermore, the
 Netflicker could be considered to be using the concept of cloud
-efficiency - streamed videos are typically of a lower codec complexity
-than downloaded or DVD/BluRay based video.
+efficiency -- streamed videos are typically of a lower codec
+complexity than downloaded or DVD/BluRay based
+video~\cite{schien-et-al:2013}.
 
 \subsection{Significance of Interchangeability of Devices}
 
@@ -994,14 +930,13 @@ of this.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{images/ghgimpact_devicetypes.png}
-\caption{Variation in GHG Impact for Different Device Types}
+\caption{Variation in GHG impact for different device types}
 \label{fig:ghgimpact_devicetype} 
 \end{figure}
 
 In our model we assume the Generalist and the Portable Generalist have
-identical behaviours - the increase in potability of the device does
-not, for the prototypical days covered, induce additional IT
-demand. 
+identical behaviours -- the increase in potability of the device does
+not, for the prototypical days covered, induce additional ICT demand.
 
 % In reality, only a few exceptions to this can be perceived -
 % using a laptop in meetings, taking a laptop to a friends house - but
@@ -1010,7 +945,7 @@ demand.
 % can be undertaken on a laptop.
 
 For the Ultra Portable Generalist, we model there being a slight
-increase in IT use induced by the inclusion of a tablet. The tablet is
+increase in ICT use induced by the inclusion of a tablet. The tablet is
 on the individual almost as much as a phone is, and this increase in
 portability is somewhat more significant than the desktop-laptop
 transition. Some tasks are deemed to be down-scalable to the tablet,
@@ -1024,7 +959,7 @@ to the sum of the actions scaled up from the phone and the induced
 actions. When the greater embodied carbon is then included, we can see
 the inclusion of new smaller device has actually resulted in a greater
 environmental impact of the Ultra Portable Generalist than the
-Portable Generalist.  Crucially, this difference is small compared to
+Portable Generalist. Crucially, this difference is small compared to
 the differences between both of these users and the original,
 desktop-based Generalist. It could be logically concluded the extra
 carbon for The Ultra Portable Generalist is a small price to pay for
@@ -1033,22 +968,21 @@ Generalist. Indeed, one could theorise that a policy to give away
 tablets in return for old desktop computers would, at least in theory,
 be highly effective.
 
-Ultimately this is a very complex topic that involves psychological
-and market forces and is only lightly touched upon here. From the
-theory here, a dream solution appears to make 98\% of individuals use
-only a phone; our knowledge of reality knows this is a ridiculously
-impractical suggestion. Crucially though, the relationship between
-devices, behaviour and carbon is highly significant and in the opinion
-of this paper, warrants further research.
+Ultimately this is a very complex topic that involves wider
+socio-psychological and market forces and is only briefly considered
+here. From the theory here, an ideal solution appears to make 98\% of
+individuals use only a phone; this is clearly an unacceptable
+suggestion. Crucially though, the relationship between devices,
+behaviour and carbon is highly significant and demands further
+research.
 
 \subsection{Relative Significance of Device and Supporting
   Infrastructure}
 
-Figure X summarises what is already immediately apparent from Section
-5.1.3 and what is perhaps the strongest trend in all of our findings:
+What is perhaps the strongest trend in all of our findings is that
 device energy dominates. The logical progression of this is the CPU
 intensity of a task is a far better indicator of its environmental
-impact, at least in most situations, than the data flow.  If accurate,
+impact, at least in most situations, than the data flow. If accurate,
 this suggests that efforts to reduce server and LAN power would be
 better spent on reducing device energy.
 
@@ -1059,15 +993,16 @@ better spent on reducing device energy.
 \subsubsection{Downscaling}
 
 As the above results show, different use characteristics produce wide
-variation in the consumed energy and CO$_2$ production. The most apparent
-variation is in the contrast between desktop use and smartphone
-use. This gives credence to to recommendation to use a smartphone over
-a desktop where possible, especially for low power tasks such as
-internet browsing. This raises practical issues, so a significant
-benefit can also be made by the transition from desktop to laptop with
-much more ease. With the exception of the 2\% of Intense Clouders and
-Intense Non-Clouders, the vast majority of users’ tasks should be able
-to transition flawlessly (at least in the technical sense).
+variation in the consumed energy and CO$_2$ production. The most
+apparent variation is in the contrast between desktop use and
+smartphone use. This gives credence to recommendations to use a
+smartphone over a desktop where possible, especially for low power
+tasks such as internet browsing. This raises practical issues, so a
+significant benefit can also be made by the transition from desktop to
+laptop with much more ease. With the exception of the 2\% of Intense
+Clouders and Intense Non-Clouders, the vast majority of users' tasks
+should be able to transition flawlessly (at least in the technical
+sense).
 
 % Light users, whose embodied dominates their overall carbon impact,
 % could make a substantial reduction by using a laptop over a
@@ -1086,42 +1021,36 @@ the time of day it is produced. It could be suggested that users carry
 out certain activities at particular times to make the most of the CO$_2$
 per energy constant at that time but in practice this may not be
 suitable for the majority of users, and the benefits may not out-weigh
-the hassle.
+the inconvenience.
 
-However, if the highest device energy users - The Intense Clouders and
-Intense Non-Clouders - have any flexibility as to when they are able
-to undertake their high power processing, careful monitoring of the
-live carbon value could result in as much as a 45\% reduction in its
-carbon if done at a low point rather than a high point.
-
-These user types also have the highest proportion of device
-energy. That is to say, those with high energy use over a year
-typically pay a larger share of that (on the assumption WAN and
-Servers are not paid for by the user directly). As such, if
-carbon-based taxing or demand-based pricing, as has been suggested,
-becomes a reality, this time consideration will make economic as well
-as environmental sense.
+However, if the highest device energy users -- the Intense Clouders
+and Intense Non-Clouders -- have any flexibility as to when they are
+able to undertake their high power processing, careful monitoring of
+the live carbon value could result in as much as a 45\% reduction in
+its carbon if done at a low point rather than a high point. These user
+types also have the highest proportion of device energy. That is to
+say, those with high energy use over a year typically pay a larger
+share of that (on the assumption WAN and Servers are not paid for by
+the user directly). As such, if carbon-based taxing or demand-based
+pricing, as has been suggested, becomes a reality, this time
+consideration will make economic as well as environmental sense.
 
 \subsection{Commercial}
 
-\subsubsection{No Standby Policy}
+\subsubsection{No Standby}
 
 As highlighted throughout, on a work day, considerable power is wasted
 through idle desktops. Screen savers could be an easy quick win for
 the effort setting them would, but are unlikely to reduce the overall
-wastage by more than 30\%.
-
-Suggesting individuals turn off their computers whenever they are not
-directly using them is likely to be completely impractical in the
-workplace. However, turning them off outside working hours could
-result in a substantial saving, albeit not modelled here. Some
-pioneering companies operate network protocols that attempt to shut
-down the computer, unless aborted by the user, at the end of working
-hours.
-
-There is some synergy between this and the downsizing
-recommendation. Laptops would not only use less power in general, but
-waste far less sitting in idle.
+wastage by more than 30\%. Suggesting individuals turn off their
+computers whenever they are not directly using them is likely to be
+completely impractical in the workplace. However, turning them off
+outside working hours could result in a substantial saving, albeit not
+modelled here. Some pioneering companies operate network protocols
+that attempt to shut down the computer, unless aborted by the user, at
+the end of working hours. There is some synergy between this and the
+downsizing recommendation. Laptops would not only use less power in
+general, but waste far less sitting in idle.
 
 \subsection{Policy}
 
@@ -1129,41 +1058,36 @@ waste far less sitting in idle.
 
 Clearly encouraging large users of electricity, as well as to a lesser
 degree the average user, out of high-peak times is beneficial for
-reducing the environmental impact of IT, but also to the national
+reducing the environmental impact of ICT, but also to the national
 grid, to whom grid variation causes immense financial cost.
 
-If electrical providers are unwilling to switch to `smart pricing' -
-electrical pricing based on the demand at that time - then perhaps a
-carbon tax, charged based on what CO$_2$ intensity the grid is at any one
-point, will give an economic incentive for people to change
+If electrical providers are unwilling to switch to `smart pricing' --
+electrical pricing based on the demand at that time -- then perhaps a
+carbon tax, charged based on what CO$_2$ intensity the grid is at any
+one point, will give an economic incentive for people to change
 behaviour. Furthermore, this will both improve the environment, but
-also reduce the cost of variability to the National Grid, which is
-funded in part by the government.
-
-Consequentially, this will also make de-carbonisation easier (as low
-carbon generation is typically baseload (geothermal, nuclear) or
-unpredictable (wind, solar)). Another consequential benefit would be
-the motivation of the public for the government to reduce the carbon
-of the grid and so reduce their carbon tax.
-
-Admittedly, increasing the price of a sensitive topic such as energy
-price would be a political challenge, but if pulled off would be
-extremely effective.
+also reduce the cost of variability to the UK National Grid. This will
+also make de-carbonisation easier (as low carbon generation is
+typically baseload (geothermal, nuclear) or unpredictable (wind,
+solar). Another consequential benefit would be the motivation of the
+public for the government to reduce the carbon of the grid and so
+reduce their carbon tax. As we have seen in the run up to the 2015 UK
+elections, energy policy is an extremely politically-sensitive topic,
+but if successful would be extremely effective.
 
 \subsubsection{High-Power Leisure Device Regulations}
 
 In the same way that car buyers are put off inefficient cars by road
 tax, a tax on high power consuming computer components could be the
 answer, such as 200W+ graphics cards. While this may be effective, it
-would also be hard to in-force, and ethically questionable if other
-entertainment products (TVs, Stereos) were not taxed also. Implying
-individuals should adjust their leisure time to be more sustainable
-has become a decreasingly popular viewpoint.
-
-Labelling however, such as common practice on other products sold in
-the EU, could be a reasonable compromise, encouraging consumers to
-make the choice themselves. These have been highly effective on
-fridges and other white goods.
+would also be hard to enforce, and ethically questionable if other
+more common commercial entertainment products (for example,
+televisions) were not taxed similarly. Implying individuals should
+adjust their leisure time to be more sustainable has become a
+increasingly unpopular viewpoint. Labelling however, such as common
+practice on other products sold in the EU, could be a reasonable
+compromise, encouraging consumers to make the choice themselves. These
+have been highly effective on fridges and other white goods.
 
 
 \subsection{Further Work}
@@ -1171,32 +1095,32 @@ fridges and other white goods.
 This section will briefly summarise suggestions for model improvements
 discussed throughout:
 
-{\textbf{Monitor Brightness:}} as discussed in Data Collection Strategy,
-inclusion of the input of the brightness level a user typically sets
+\begin{compactitem}
+\item Monitor brightness: inclusion of the input of the brightness level a user typically sets
 their display to will improve display accuracy across all devices, but
 specifically small devices.
 
-{\textbf{Specific Devices within categories:}} as discussed throughout,
+\item Specific devices within categories: as discussed throughout,
 inclusion of the option to input specific devices will further
 increase accuracy across all devices.
 
-{\textbf{Automation of tool:}} to increase accuracy and ease of primary
+\item Tool automation: to increase accuracy and ease of primary
 research, the tool could be translated into an executable program,
 which runs in the background, monitoring the task, data and energy
 flows. This could also reference live carbon resources at that
 instantaneous moment of action, allowing rapid collection of near-
 flawless data.
 
-{\textbf{Relationship Between desktop cost and CPU idle power:}} an
+\item Relationship between desktop cost and CPU idle power: an
 alternative method for estimating the idle power of a given desktop
 (to accommodate the large variation), may be to assume that the cost
-of a desktop (adjusted to today’s value, where purchased
+of a desktop (adjusted to today's value, where purchased
 historically), is proportional to the power of the CPU. Anecdotal
 evidence suggests this could be a valid relationship and individuals
 are more likely to know when they purchased their desktop, and for how
 much, than they are the CPU it contains.
 
-{\textbf{Chronological context of embodied carbon:}} if the dimension
+\item Chronological context of embodied carbon: if the dimension
 of time is important to use CO$_2$, it is logical to assume it influences
 the embodied carbon also. As such, it could be suggested that embodied
 carbon for a given device will depend upon the grid power used, the
@@ -1205,6 +1129,7 @@ dependant upon when it was made. This will not only be a useful
 investigation to see how older and new devices compare on embodied
 carbon, but also to evaluate if the embodied carbon (per CO$_2$ of
 device) is general increasing or decreasing over time.
+\end{compactitem}
 
 
 %\newpage
