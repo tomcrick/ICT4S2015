@@ -177,18 +177,13 @@ that satisfies two criteria:
   computers.
 \end{itemize}
 
-We believe the vast majority if IT meeting these two criteria can be
+We believe the vast majority of IT meeting these two criteria can be
 summarised as follows:
 
 \begin{enumerate}
 \item Smartphones: A mobile phone based upon a stored-program
   architecture with a range of communication technologies (e.g. GSM, GPS,
   Bluetooth, etc).
-\item Primary function is that of the creation, processing or display
-  of data; excluding electronic devices that use stored-program
-  architecture only as a supplement to a different core function, such
-  as cars, white goods, electrical toothbrushes, watches and bike
-  computers.
 \item Tablets: A device that is possible to be held in one’s hand but
   has no GSM connectivity.
 \item Laptops: A device that weighs less than 4kg but greater
@@ -207,7 +202,7 @@ summarised as follows:
 
 Items 1 to 4 are classified as `Devices'. These are items that are
 created for their own purpose to serve the user, not to service the
-existence of other IT items. Items 6 to 8 are classified as
+existence of other IT items. Items 5 to 7 are classified as
 `supporting infrastructure'. These are items whose primary function is
 to service the existence of the devices.
 
@@ -277,7 +272,7 @@ work.
 
 \subsection{Areas of Strong Focus}
 
-\subsubsection{GHG emission sassociated with manufacture}
+\subsubsection{GHG emissions associated with manufacture}
 
 Both Williams~\cite{williams:2004} and Teehan et
 al.~\cite{teehan-et-al:2010} explore the relationship between the mass
@@ -711,10 +706,6 @@ film. This however, is most probably a matter of personal taste, and
 the inter-use-case-brightness-level variation is likely to be less
 significant than the individual’s average preferences on brightness.
 
-In theory it would be possible to augment the tool process to request
-this when data is input. Due to time constraints this will be omitted
-from the tool but considered as a potential point of future work.
-
 \noindent {\textbf{Network}}
 
 Network connection power is typically perfectly inelastic to data, and
@@ -743,15 +734,15 @@ example the HD with file sharing, the graphics card with media
 viewing. As such, this is considered to be a smaller influence than
 the peripherals
 
-For each task, the other power factor will be estimated based on the
-above factors. The other power factor will then be multiplied by the
-device’s idle CPU power. With the assumption of equal intensity, while
-this will hold true for B, it will also result in some inaccuracies in
-A, implying the peripherals will scale with the device’s CPU. In
-mitigation, some of these situations will never be observed, such as
-printing from a phone. Others will, such as printing from a laptop,
-but we will note these inaccuracies, which we deem to be small, as a
-point of further improvement.
+% For each task, the other power factor will be estimated based on the
+% above factors. The other power factor will then be multiplied by the
+% device’s idle CPU power. With the assumption of equal intensity, while
+% this will hold true for B, it will also result in some inaccuracies in
+% A, implying the peripherals will scale with the device’s CPU. In
+% mitigation, some of these situations will never be observed, such as
+% printing from a phone. Others will, such as printing from a laptop,
+% but we will note these inaccuracies, which we deem to be small, as a
+% point of further improvement.
 
 
 \subsubsection{Use -- Supporting Infrastructure}
@@ -800,12 +791,12 @@ almost all situations, the phone’s power is imperceptibly small
 compared to the desktop power. Secondly, we can observe that idle
 computer power is a significant point of wastage.
 
-\begin{figure*}[!htp]
+\begin{figure}[!htp]
 \centering
-\includegraphics[width=\textwidth]{images/generalist_weekday.png}
+\includegraphics[width=\columnwidth]{images/generalist_weekday.png}
 \caption{Energy Use by Device and Component}
 \label{fig:generalist_weekday} 
-\end{figure*}
+\end{figure}
 
 \subsection{By User}
 
@@ -815,12 +806,12 @@ can observe that there is a substantial variation in the environmental
 impact by the type of user. We will discuss the significance of this
 in the conclusion.
 
-\begin{figure*}[!htp]
+\begin{figure}[!htp]
 \centering
-\includegraphics[width=\textwidth]{images/energyuse_co2e_overyearbyuser.png}
+\includegraphics[width=\columnwidth]{images/energyuse_co2e_overyearbyuser.png}
 \caption{Comparison of Energy Use and CO$_2$e for Users}
 \label{fig:energyuse_co2e_overyearbyuser} 
-\end{figure*}
+\end{figure}
 
 \subsection{By Infrastructure}
 
@@ -832,12 +823,12 @@ smaller again, and roughly equal to each other. Secondarily, we can
 observe that the exact proportions of all four energy types vary
 considerably depending on the user type.
 
-\begin{figure*}[!htp]
+\begin{figure}[!htp]
 \centering
-\includegraphics[width=\textwidth]{images/energyuse_comparison.png}
+\includegraphics[width=\columnwidth]{images/energyuse_comparison.png}
 \caption{Comparison of Energy Use of Device and Infrastructure}
 \label{fig:energyusecomparison} 
-\end{figure*}
+\end{figure}
 
 \subsection{Estimation of IT Impact of one average UK individual in
   one year}
@@ -854,42 +845,42 @@ The tabulated values of energy and carbon by each prototypical day for
 each user, which have been used to produce this calculation, can be
 seen in supporting information section x?.
 
-\subsection{Validation}
+% \subsection{Validation}
 
-The approximate total annual energy consumption (kWh) for devices/user
-seem reasonable when compared to EnergyStar TEC and sust-it.net
-analysis. The latter states:
+% The approximate total annual energy consumption (kWh) for devices/user
+% seem reasonable when compared to EnergyStar TEC and sust-it.net
+% analysis. The latter states:
 
-- Desktop: approx 50kWh - 200kWh per year, \pounds 6-\pounds 28\\
-Laptop: approx 6kWh-55kWh, \pounds 1-\pounds 8\\
+% - Desktop: approx 50kWh - 200kWh per year, \pounds 6-\pounds 28\\
+% Laptop: approx 6kWh-55kWh, \pounds 1-\pounds 8\\
 
-Our equivalent cost of \pounds 39 seems a realistic value for the time
-period.  Our slightly higher value can be attributed to the inclusion
-of both wider infrastructure, standby power and the inclusion of
-extreme user groups such as The Intense Clouder and The Intense Non-
-Clouder.
+% Our equivalent cost of \pounds 39 seems a realistic value for the time
+% period.  Our slightly higher value can be attributed to the inclusion
+% of both wider infrastructure, standby power and the inclusion of
+% extreme user groups such as The Intense Clouder and The Intense Non-
+% Clouder.
 
 
 \section{Conclusions}
 
-\subsection{Significance of Chronological Context}
+% \subsection{Significance of Chronological Context}
 
-To further evaluate the significance of carbon variation we will
-compare two identical situations: the social enthusiast using social
-networking on a 3G phone at different times of the day.
+% To further evaluate the significance of carbon variation we will
+% compare two identical situations: the social enthusiast using social
+% networking on a 3G phone at different times of the day.
 
-As Figure~\ref{fig:ghgimpact_times} shows, the grid carbon varies
-within a sufficient proportion of the day’s hours that users are
-active in both the highs and the lows. As such, social networking on
-the commute to work is about 6.7\% more carbon intensive than a
-session shortly before bed.
+% As Figure~\ref{fig:ghgimpact_times} shows, the grid carbon varies
+% within a sufficient proportion of the day’s hours that users are
+% active in both the highs and the lows. As such, social networking on
+% the commute to work is about 6.7\% more carbon intensive than a
+% session shortly before bed.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{images/ghgimpact_times.png}
-\caption{GHG Impact of Identical Action at Different Times}
-\label{fig:ghgimpact_times} 
-\end{figure}
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=\columnwidth]{images/ghgimpact_times.png}
+% \caption{GHG Impact of Identical Action at Different Times}
+% \label{fig:ghgimpact_times} 
+% \end{figure}
 
 \subsection{Significance of IT at Work}
 
@@ -980,13 +971,13 @@ Modelling similar behaviour across different devices provides the
 ability to comment on how devices can be interchanged and the effects
 of this.
 
-Device interchanging is a voluntary process that has come to light
-with the proliferation of different kinds of devices in the consumer
-market. Where there was once desktops and a few laptop models, there
-is now a myriad of desktop, laptop, tablet and phone devices, and a
-myriad of hybrids not covered in this report. In reality, device
-interchanging is not a simple process, and this was reflected in our
-user types.
+% Device interchanging is a voluntary process that has come to light
+% with the proliferation of different kinds of devices in the consumer
+% market. Where there was once desktops and a few laptop models, there
+% is now a myriad of desktop, laptop, tablet and phone devices, and a
+% myriad of hybrids not covered in this report. In reality, device
+% interchanging is not a simple process, and this was reflected in our
+% user types.
 
 \begin{figure}[!ht]
 \centering
@@ -998,11 +989,13 @@ user types.
 In our model we assume the Generalist and the Portable Generalist have
 identical behaviours - the increase in potability of the device does
 not, for the prototypical days covered, induce additional IT
-demand. In reality, only a few exceptions to this can be perceived -
-using a laptop in meetings, taking a laptop to a friends house - but
-these are relatively infrequent events in the scale of an individuals
-life. Furthermore, the vast majority of tasks undertaken on a desktop
-can be undertaken on a laptop.
+demand. 
+
+% In reality, only a few exceptions to this can be perceived -
+% using a laptop in meetings, taking a laptop to a friends house - but
+% these are relatively infrequent events in the scale of an individuals
+% life. Furthermore, the vast majority of tasks undertaken on a desktop
+% can be undertaken on a laptop.
 
 For the Ultra Portable Generalist, we model there being a slight
 increase in IT use induced by the inclusion of a tablet. The tablet is
@@ -1062,13 +1055,13 @@ internet browsing. This raises practical issues, so a significant
 benefit can also be made by the transition from desktop to laptop with
 much more ease. With the exception of the 2\% of Intense Clouders and
 Intense Non-Clouders, the vast majority of users’ tasks should be able
-to transition flawlessly.
+to transition flawlessly (at least in the technical sense).
 
-Light users, whose embodied dominates their overall carbon impact,
-could make a substantial reduction by using a laptop over a
-desktop. Furthermore, these individuals could purchase a smart phone,
-even if for their own entertainment, and make negligible difference to
-their overall impact.
+% Light users, whose embodied dominates their overall carbon impact,
+% could make a substantial reduction by using a laptop over a
+% desktop. Furthermore, these individuals could purchase a smart phone,
+% even if for their own entertainment, and make negligible difference to
+% their overall impact.
 
 In a commercial context, the operating costs of an office run off
 laptops as opposed to desktops would be significant, and also provide
