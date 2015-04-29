@@ -9,12 +9,9 @@
 %\usepackage[pdftex]{hyperref}
 
 
-% correct bad hyphenation here
-%\hyphenation{op-tical net-works semi-conduc-tor}
-
-
 \begin{document}
-%
+\bstctlcite{IEEEexample:BSTcontrol}
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 \title{The Environmental Impacts of ICT Use:\\A User-Oriented Perspective}
@@ -96,13 +93,12 @@ transformation.
 %\IEEEpeerreviewmaketitle
 
 \begin{IEEEkeywords}
-ICT, Life Cycle Assessment, Environmental Impact, Low Carbon Society, Emissions, Energy
+ICT, Life Cycle Assessment, Environmental Impact, Low Carbon Society,
+Green ICT, Emissions, Energy
 \end{IEEEkeywords}
 
 
 \section{Introduction}
-
-\subsection{ICT in Modern Society}
 
 The creation, development and uptake of ICT is frequently cited as one
 of the most defining characteristics of humanity over the last 100
@@ -155,7 +151,8 @@ Rising concerns over man-made climate change and resource use, set
 amongst a context of rapid user growth, has driven increased focus on
 sustainability and the wider environmental impact of ICT. They have
 been associated with 1.3\% of the world's total carbon footprint and
-3.9\% of global energy use~\cite{plepys:2002,wheeland:2011}. While
+3.9\% of global energy
+use\footnote{\url{http://www.greenbiz.com/blog/2011/03/08/exploring-ways-reduce-its-environmental-impacts}}~\cite{plepys:2002}. While
 modest in terms of overall impact, the continued penetration of ICT
 brings potential concerns to how this will grow, with the rapid
 technological pace of the sector offers the perception of ease of
@@ -287,34 +284,37 @@ uses this appreciation to determine areas of novel and valuable work.
 
 By looking at the latest information on the level and growth of CO$_2$
 emissions, it is possible to decompose into key driving
-factors~\cite{ieaco2em:2014}. Both Williams~\cite{williams:2004} and
-Teehan et al.~\cite{teehan-et-al:2010} explore the relationship
-between the mass of the device and the embodied GHGs associated with
-the manufacture stage. Technology manufacturers such as Apple publish
-data\footnote{\url{https://www.apple.com/environment/reports/}}
-relating to environmental impact for each of their products, motivated
-by customer pressure on the embodied carbon of their purchases.
+factors~\cite{ieaco2em:2014}. Existing research has explored the
+relationship between the mass of the device and the embodied GHGs
+associated with the manufacture
+stage~\cite{williams:2004,teehan-et-al:2010}. Protocols have also been
+developed to provide guidance for estimating the emission reductions
+that could result from the provision or sourcing of low or zero carbon
+ICT services~\cite{steenhof-et-al:2012}.
 
 \subsection{Environmental Impact of Disposal}
 
-Gard and Keoleian~\cite{gard+keoleian:2002} outline that the energy
-associated with disposal is negligible relative to the use and
-manufacturing phase. Apple environmental data for products shows this
-as a relatively insignificant stage: typically accounting for 2-4\% of
-the GHG emissions associated with a device, with production and use
-phase typically the greatest contributors. While consequential
-environmental impacts of disposal are significant, direct GHG emission
-is not.
+The energy associated with disposal is negligible relative to the use
+and manufacturing phase~\cite{williams:2004}. Technology manufacturers
+such as Apple publish
+data\footnote{\url{https://www.apple.com/environment/reports/}}
+relating to environmental impact for each of their products, motivated
+by customer pressure on the embodied carbon of their purchases. Their
+environmental data for products shows this as a relatively
+insignificant stage: typically accounting for 2-4\% of the GHG
+emissions associated with a device, with production and use phase
+typically the greatest contributors. While consequential environmental
+impacts of disposal are significant, direct GHG emission is not.
 
 \subsection{Impact of Cloud Computing}
 
-Williams et al. analyses the potential reductions in GHG production
-through a shift to cloud computing~\cite{williams-et-al:2014}, and the
-rebound effect of digital data becoming cheaper and easier to consume
-meaning more and more is used is well documented. There is a strong
-commercial motivation for such users, with the potential to save
-high-intensity ICT organisations substantial savings from switching to
-the cloud.
+Recent research has focused on the potential reductions in GHG
+production through a shift to cloud
+computing~\cite{williams-et-al:2014}, and the rebound effect of
+digital data becoming cheaper and easier to consume meaning more and
+more is used is well documented. There is a strong commercial
+motivation for such users, with the potential to save high-intensity
+ICT organisations substantial savings from switching to the cloud.
 
 %\subsection{Areas of Weak Focus}
 
@@ -370,8 +370,8 @@ Star\footnote{\url{https://www.energystar.gov/}} estimate a total
 electrical annual consumption (TEC), based on an average device power
 multiplied by an average hours per day of use; there are also
 international datasets available from the US Energy Information
-Administration\footnote{\url{www.eia.gov/cfapps/ipdbproject/}}. Primary
-research in this area is ultimately constrained by cost; by
+Administration\footnote{\url{http://www.eia.gov/cfapps/ipdbproject/}}.
+Primary research in this area is ultimately constrained by cost; by
 observation it is clear that ICT is used in a number of ways, each
 having significant effect on the device's power use.
 
@@ -553,7 +553,7 @@ specified.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{images/ukitusers_marketshare.png}
+\includegraphics[width=0.9\columnwidth]{images/ukitusers_marketshare.png}
 \caption{Assumed market share of ICT user types in UK}
 \label{fig:marketshare} 
 \end{figure}
@@ -654,7 +654,7 @@ device, the CPU rests at its idle power.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{images/cpuintensity_usecase.png}
+\includegraphics[width=0.9\columnwidth]{images/cpuintensity_usecase.png}
 \caption{CPU intensity by use case}
 \label{fig:cpuintensity} 
 \end{figure}
@@ -751,7 +751,7 @@ computer power is a significant point of wastage.
 
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=\columnwidth]{images/generalist_weekday.png}
+\includegraphics[width=0.9\columnwidth]{images/generalist_weekday.png}
 \caption{Energy use by device and component}
 \label{fig:generalist_weekday} 
 \end{figure}
@@ -766,7 +766,7 @@ in the conclusion.
 
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=\columnwidth]{images/energyuse_co2e_overyearbyuser.png}
+\includegraphics[width=0.9\columnwidth]{images/energyuse_co2e_overyearbyuser.png}
 \caption{Comparison of energy use and CO$_2$e for users}
 \label{fig:energyuse_co2e_overyearbyuser} 
 \end{figure}
@@ -783,7 +783,7 @@ depending on the user type.
 
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=\columnwidth]{images/energyuse_comparison.png}
+\includegraphics[width=0.9\columnwidth]{images/energyuse_comparison.png}
 \caption{Comparison of energy use of device and infrastructure}
 \label{fig:energyusecomparison} 
 \end{figure}
@@ -855,7 +855,7 @@ Figure~\ref{fig:ghgvariation_userworkrelatedit}.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{images/ghgvariation_userworkrelatedit.png}
+\includegraphics[width=0.9\columnwidth]{images/ghgvariation_userworkrelatedit.png}
 \caption{GHG variation with user work-related ICT}
 \label{fig:ghgvariation_userworkrelatedit} 
 \end{figure}
@@ -898,7 +898,7 @@ the environmental impact of given device uses.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{images/comparison_users_devices.png}
+\includegraphics[width=0.9\columnwidth]{images/comparison_users_devices.png}
 \caption{Comparison of different users and their devices}
 \label{fig:comparison_users_devices.png} 
 \end{figure}
@@ -929,7 +929,7 @@ of this.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{images/ghgimpact_devicetypes.png}
+\includegraphics[width=0.9\columnwidth]{images/ghgimpact_devicetypes.png}
 \caption{Variation in GHG impact for different device types}
 \label{fig:ghgimpact_devicetype} 
 \end{figure}
@@ -968,16 +968,8 @@ Generalist. Indeed, one could theorise that a policy to give away
 tablets in return for old desktop computers would, at least in theory,
 be highly effective.
 
-Ultimately this is a very complex topic that involves wider
-socio-psychological and market forces and is only briefly considered
-here. From the theory here, an ideal solution appears to make 98\% of
-individuals use only a phone; this is clearly an unacceptable
-suggestion. Crucially though, the relationship between devices,
-behaviour and carbon is highly significant and demands further
-research.
-
-\subsection{Relative Significance of Device and Supporting
-  Infrastructure}
+% \subsection{Relative Significance of Device and Supporting
+%   Infrastructure}
 
 What is perhaps the strongest trend in all of our findings is that
 device energy dominates. The logical progression of this is the CPU
@@ -985,6 +977,16 @@ intensity of a task is a far better indicator of its environmental
 impact, at least in most situations, than the data flow. If accurate,
 this suggests that efforts to reduce server and LAN power would be
 better spent on reducing device energy.
+
+Ultimately this is a very complex topic that involves wider
+socio-psychological and market forces and is only briefly considered
+here. From the theory here, an ideal solution appears to make 98\% of
+individuals use only a phone; this is clearly an unacceptable
+suggestion. Crucially though, the relationship between devices,
+behaviour and carbon is highly significant and demands further
+research, providing huge potential for national policy
+formulation~\cite{smart2020:2008,ruth:2011}.
+
 
 \section{Recommendations}
 
@@ -1016,24 +1018,23 @@ more flexibility.
 
 \subsubsection{Re-scheduling}
 
-The results also shows a significant variation in the CO$_2$ produced and
-the time of day it is produced. It could be suggested that users carry
-out certain activities at particular times to make the most of the CO$_2$
-per energy constant at that time but in practice this may not be
-suitable for the majority of users, and the benefits may not out-weigh
-the inconvenience.
-
-However, if the highest device energy users -- the Intense Clouders
-and Intense Non-Clouders -- have any flexibility as to when they are
-able to undertake their high power processing, careful monitoring of
-the live carbon value could result in as much as a 45\% reduction in
-its carbon if done at a low point rather than a high point. These user
-types also have the highest proportion of device energy. That is to
-say, those with high energy use over a year typically pay a larger
-share of that (on the assumption WAN and Servers are not paid for by
-the user directly). As such, if carbon-based taxing or demand-based
-pricing, as has been suggested, becomes a reality, this time
-consideration will make economic as well as environmental sense.
+The results also shows a significant variation in the CO$_2$ produced
+and the time of day it is produced. It could be suggested that users
+carry out certain activities at particular times to make the most of
+the CO$_2$ per energy constant at that time but in practice this may
+not be suitable for the majority of users, and the benefits may not
+out-weigh the inconvenience. However, if the highest device energy
+users -- the Intense Clouders and Intense Non-Clouders -- have any
+flexibility as to when they are able to undertake their high power
+processing, careful monitoring of the live carbon value could result
+in as much as a 45\% reduction in its carbon if done at a low point
+rather than a high point. These user types also have the highest
+proportion of device energy. That is to say, those with high energy
+use over a year typically pay a larger share of that (on the
+assumption WAN and Servers are not paid for by the user directly). As
+such, if carbon-based taxing or demand-based pricing, as has been
+suggested, becomes a reality, this time consideration will make
+economic as well as environmental sense.
 
 \subsection{Commercial}
 
@@ -1072,8 +1073,11 @@ typically baseload (geothermal, nuclear) or unpredictable (wind,
 solar). Another consequential benefit would be the motivation of the
 public for the government to reduce the carbon of the grid and so
 reduce their carbon tax. As we have seen in the run up to the 2015 UK
-elections, energy policy is an extremely politically-sensitive topic,
-but if successful would be extremely effective.
+elections, energy policy is an extremely politically-sensitive topic;
+however, an aggressive national agenda for ICT-specific focus on
+energy management, would -- if successful -- provide a potential model
+for other sectors where reduced electricity use and lower carbon
+footprint could be achieved~\cite{smart2020:2008,ruth:2011}.
 
 \subsubsection{High-Power Leisure Device Regulations}
 
@@ -1108,8 +1112,8 @@ increase accuracy across all devices.
 research, the tool could be translated into an executable program,
 which runs in the background, monitoring the task, data and energy
 flows. This could also reference live carbon resources at that
-instantaneous moment of action, allowing rapid collection of near-
-flawless data.
+instantaneous moment of action, allowing rapid collection of
+near-flawless data.
 
 \item Relationship between desktop cost and CPU idle power: an
 alternative method for estimating the idle power of a given desktop
